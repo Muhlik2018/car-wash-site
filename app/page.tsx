@@ -86,9 +86,9 @@ export default function Home() {
   const services = [
     {
       title: "Exterior Wash",
-      description: "Complete exterior cleaning with premium soap, wheel detailing, and protective wax for a showroom shine.",
+      description: "Complete exterior cleaning with premium soap, hand rinse, and protective wax for a showroom shine.",
       details:
-        "Our Exterior Wash includes foam pre-wash, hand rinse, wheel cleaning, tire shine, high-quality soap application, and a finishing wax sealant for lasting protection and shine.",
+        "Our Exterior Wash includes foam pre-wash, high-quality soap application, window cleaning, hand rinse and a finishing wax sealant for lasting protection and shine.",
       icon: "🧽",
       price: "$49",
     },
@@ -96,15 +96,15 @@ export default function Home() {
       title: "Premium Wash",
       description: "Comprehensive exterior and interior cleaning with advanced detailing techniques for superior results.",
       details:
-        "Premium Wash combines exterior cleaning with interior vacuuming, dashboard polish, window cleaning, leather conditioning, and odor elimination for a complete vehicle refresh.",
+        "Premium Wash combines exterior cleaning with tyre shine, wheel cleaning, interior vacuuming, leather conditioning, and odor elimination for a complete vehicle refresh.",
       icon: "🧼",
       price: "$129",
     },
     {
       title: "Express Detail",
-      description: "Full professional detailing service with ceramic coating, paint correction, and complete interior restoration.",
+      description: "Express professional detailing service for showroom-quality results.",
       details:
-        "Express Detail provides full exterior correction, clay bar treatment, ceramic coating application, complete interior deep clean, trim restoration, engine bay detailing, and finishing touches for a showroom-quality result.",
+        "Upon premium wash, express detail provide seat deep cleaning, steam cleaning, hand waxing and engine bay cleaning for a showroom-quality result.",
       icon: "🚿",
       price: "$259",
     },
@@ -120,13 +120,13 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div className="space-y-6 text-center lg:text-left">
               <span className="inline-flex rounded-full bg-emerald-500/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700 ring-1 ring-emerald-300/30">
-                Premium car wash services
+                Premium Mobile Car Wash Services
               </span>
               <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
                 Sparkling clean cars, every time.
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-gray-600 sm:text-xl">
-                Fast exterior washes, full detailing, and reliable maintenance packages designed for busy drivers who want a spotless ride without the hassle.
+                We provide quality, convenient, yet fast and affordable car detail services that performed at your door. <br /> Friendly to families, busy drivers who tired of waiting for their car being cleaned in the shopping center, and those who want their car super clean!
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a href="#booking">
@@ -218,15 +218,15 @@ export default function Home() {
               <p className="text-sm uppercase tracking-[0.24em] text-emerald-600">Why choose us</p>
               <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">Reliable care for your vehicle and schedule.</h2>
               <p className="max-w-xl text-base leading-7 text-gray-600">
-                We combine fast service with premium products, so your car leaves cleaner, shinier, and better protected than before. No waiting, no guesswork, just dependable service whenever you need it.
+                We combine convenient service with premium products, so your car leaves cleaner, shinier, and better protected than before. No waiting, no guesswork, just dependable service whenever you need it.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { title: "Flexible booking", detail: "Online reservations and walk-in availability for busy schedules." },
-                { title: "Eco-friendly wash", detail: "Water-saving systems and biodegradable cleaning solutions." },
-                { title: "Expert staff", detail: "Trained detailers who treat every car with care." },
-                { title: "Satisfaction guarantee", detail: "We fix any missed spots before you leave." },
+                { title: "Flexible booking", detail: "Online reservations for busy schedules." },
+                { title: "Car-friendly wash", detail: "Only quality products used and all consumables new for each car, elimate wash damages at 100%." },
+                { title: "Expert staff", detail: "Professional employees with extensive detailing experience. Partnering with major dealership, we assure the best results." },
+                { title: "Satisfaction guarantee", detail: "We fix any missed spots before you leave. No satisfaction, no charge." },
               ].map((item) => (
                 <InfoCard key={item.title} label={item.title} value={item.detail} />
               ))}
@@ -247,11 +247,11 @@ export default function Home() {
               {[
                 {
                   quote: "My car has never looked better. Fast, friendly, and the shine lasts for weeks.",
-                  name: "Alex M.",
+                  name: "Tim L.",
                 },
                 {
-                  quote: "Great value for a full detail. The staff really cares about the results.",
-                  name: "Sofia R.",
+                  quote: "Great value for a express detail. The staff really cares about the results.",
+                  name: "Glenn C.",
                 },
               ].map((testimonial) => (
                 <blockquote key={testimonial.name} className="rounded-3xl bg-white p-6 text-gray-700 border border-gray-200 shadow-sm">
@@ -265,7 +265,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.24em] text-emerald-700">Ready to ride cleaner</p>
             <h2 className="mt-4 text-3xl font-semibold text-gray-900">Reserve your next wash.</h2>
             <p className="mt-4 text-base leading-7 text-gray-600">
-              Choose a package, select a time, and get back on the road with a freshly cleaned car in under 30 minutes.
+              Choose a package, select a time, and get back on the road with a freshly cleaned car at your doorstep.
             </p>
             <div className="mt-8 space-y-6">
               {[

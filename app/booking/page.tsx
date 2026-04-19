@@ -179,7 +179,7 @@ export default function BookingPage() {
               Reserve your next wash
             </h1>
             <p className="max-w-2xl mx-auto text-lg leading-8 text-gray-600 sm:text-xl">
-              Choose a package, select a time, and get back on the road with a freshly cleaned car in under 30 minutes.
+              Choose a package, select a time, and get back on the road with a freshly cleaned car at your doorstep.
             </p>
           </div>
         </section>
