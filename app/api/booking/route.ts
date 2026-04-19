@@ -13,6 +13,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -52,19 +54,10 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     };
-
-await new Promise((resolve, reject) => {
-    transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-            console.error(err);
-            reject(err);
-        } else {
-            console.log(info);
-            resolve(info);
-        }
-    });
-});
-
+    const sendMessage = async()=>{
+      await transporter.sendMail(mailOptions);
+    }
+    await sendMessage();
 
     // Send email
     return NextResponse.json(
