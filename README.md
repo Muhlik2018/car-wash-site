@@ -20,14 +20,29 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Email Configuration
 
-To learn more about Next.js, take a look at the following resources:
+This project includes a booking API that sends email notifications. To set up email functionality:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Copy `.env.local` and update the email credentials:
+   ```
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-app-password
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. For Gmail, you'll need to:
+   - Enable 2-factor authentication
+   - Generate an App Password (not your regular password)
+   - Use the App Password in EMAIL_PASS
+
+3. For other email providers, update the transporter configuration in `/app/api/booking/route.ts`
+
+## Features
+
+- Responsive car wash website with light theme
+- Service booking system with email notifications
+- Gallery page for showcasing work
+- Navigation bar and footer components
 
 ## Deploy on Vercel
 
