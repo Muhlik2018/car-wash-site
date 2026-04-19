@@ -141,24 +141,12 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="space-y-4 rounded-[2rem] bg-gray-50 p-8 ring-1 ring-gray-200 border border-gray-200">
-              <div className="rounded-3xl bg-white p-6 text-center border border-gray-200">
-                <p className="text-sm uppercase tracking-[0.24em] text-gray-500">Quick facts</p>
-                <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                    <InfoCard label="Years serving" value="12+" />
-                  <InfoCard label="Satisfied customers" value="3.8k" />
-                </div>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-3xl bg-gray-50 p-5 border border-gray-200">
-                  <p className="text-3xl">🚗</p>
-                  <p className="mt-3 text-sm text-gray-600">Express exterior wash with premium soap and sealant.</p>
-                </div>
-                <div className="rounded-3xl bg-gray-50 p-5 border border-gray-200">
-                  <p className="text-3xl">✨</p>
-                  <p className="mt-3 text-sm text-gray-600">Interior vacuum, leather care, and window polish.</p>
-                </div>
-              </div>
+            <div className="rounded-[2rem] overflow-hidden ring-1 ring-gray-200 border border-gray-200">
+              <img
+                src="/Homepage.jpeg"
+                alt="Car wash services"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>

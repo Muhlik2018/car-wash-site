@@ -4,17 +4,17 @@ import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 
 export default function GalleryPage() {
-  // Placeholder data for gallery images
+  // Gallery images from ExampleImages folder
   const galleryImages = [
-    { id: 1, title: "Before & After Detail", description: "Complete exterior restoration" },
-    { id: 2, title: "Interior Deep Clean", description: "Leather conditioning and vacuum" },
-    { id: 3, title: "Wheel & Tire Shine", description: "Premium tire dressing application" },
-    { id: 4, title: "Ceramic Coating", description: "Long-lasting protection finish" },
-    { id: 5, title: "Engine Bay Clean", description: "Detailed engine compartment" },
-    { id: 6, title: "Headlight Restoration", description: "Crystal clear headlight lenses" },
-    { id: 7, title: "Paint Correction", description: "Swirl mark removal and polishing" },
-    { id: 8, title: "Full Service Package", description: "Complete vehicle transformation" },
-    { id: 9, title: "Quick Wash", description: "Express exterior cleaning" },
+    { id: 1, title: "Engine Bay Cleaning", description: "Professional engine bay detailing and cleaning", image: "/ExampleImages/Engine Bay Cleanning.jpeg" },
+    { id: 2, title: "Express Detail", description: "Quick and efficient detailing service", image: "/ExampleImages/Express Detail.jpeg" },
+    { id: 3, title: "Exterior Detailing", description: "Complete exterior wash and wax protection", image: "/ExampleImages/Exterior1.jpg" },
+    { id: 4, title: "Premium Exterior", description: "High-quality exterior cleaning and finishing", image: "/ExampleImages/Exterior2.jpeg" },
+    { id: 5, title: "Headlight Restoration", description: "Crystal clear headlight lens restoration", image: "/ExampleImages/Headlight Restore.jpeg" },
+    { id: 6, title: "Interior Detailing", description: "Comprehensive interior cleaning and conditioning", image: "/ExampleImages/Interior1.jpeg" },
+    { id: 7, title: "Dashboard & Console", description: "Detailed dashboard and center console cleaning", image: "/ExampleImages/Interior2.jpeg" },
+    { id: 8, title: "Seat & Upholstery Care", description: "Professional seat cleaning and leather care", image: "/ExampleImages/Interior3.jpeg" },
+    { id: 9, title: "Steam Cleaning", description: "Deep steam cleaning for thorough sanitization", image: "/ExampleImages/Steam Cleanning.jpg" },
   ];
 
   return (
@@ -42,11 +42,12 @@ export default function GalleryPage() {
                 key={image.id}
                 className="group rounded-3xl bg-white p-6 transition hover:bg-gray-50 hover:shadow-xl hover:shadow-emerald-500/10 cursor-pointer border border-gray-200"
               >
-                <div className="aspect-square rounded-2xl bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center mb-4 group-hover:border-emerald-400/50 transition-colors">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🖼️</div>
-                    <p className="text-sm text-gray-500">Image Placeholder</p>
-                  </div>
+                <div className="aspect-square rounded-2xl overflow-hidden mb-4 border border-gray-200">
+                  <img
+                    src={image.image}
+                    alt={image.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{image.title}</h3>
                 <p className="text-sm text-gray-600">{image.description}</p>

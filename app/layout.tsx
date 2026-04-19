@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AquaShine Car Wash",
-  description: "Professional car wash and detailing services for a spotless ride.",
+  title: "Starlight Auto Car Wash",
+  description: "Professional car wash and detailing services for a spotless ride. Based in Perth",
 };
 
 export default function RootLayout({
