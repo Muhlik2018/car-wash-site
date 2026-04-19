@@ -53,9 +53,20 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+await new Promise((resolve, reject) => {
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+        } else {
+            console.log(info);
+            resolve(info);
+        }
+    });
+});
 
+
+    // Send email
     return NextResponse.json(
       { message: 'Booking submitted successfully! We will contact you soon.' },
       { status: 200 }

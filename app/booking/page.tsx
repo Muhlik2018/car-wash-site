@@ -125,7 +125,7 @@ export default function BookingPage() {
 
   const selectedService = services.find((service) => service.title === selectedServiceValue) || null;
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage('');
