@@ -141,7 +141,7 @@ export default function BookingPage() {
     };
 
     try {
-      const response = await fetch('/api/booking', {
+      const response = await fetch('http://121.40.19.78:3001/booking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

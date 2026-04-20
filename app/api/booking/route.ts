@@ -54,10 +54,7 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     };
-    const sendMessage = async()=>{
-      await transporter.sendMail(mailOptions);
-    }
-    await sendMessage();
+    await transporter.sendMail(mailOptions);
 
     // Send email
     return NextResponse.json(
