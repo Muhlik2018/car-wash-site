@@ -133,7 +133,8 @@ export default function BookingPage() {
     const formData = new FormData(event.currentTarget);
     const bookingData = {
       name: formData.get('name'),
-      phoneOrEmail: formData.get('phoneOrEmail'),
+      email: formData.get('email'),
+      mobile: formData.get('mobile'),
       address: formData.get('address'),
       preferredTime: formData.get('preferredTime'),
       service: selectedServiceValue,
@@ -211,7 +212,8 @@ export default function BookingPage() {
               </div>
               <form id="booking-form" className="space-y-4" onSubmit={handleSubmit}>
                 <TextInput label="Name" placeholder="Your full name" name="name" required />
-                <TextInput label="Phone or email" placeholder="0424000124 or email@example.com" name="phoneOrEmail" required />
+                <TextInput label="Mobile" placeholder="0424000124" name="mobile" required />
+                <TextInput label="Email" placeholder="email@example.com" name="email" required />
                 <TextInput label="Address" placeholder="Your address" name="address" required />
                 <TextInput label="Preferred time" placeholder="dd/mm/yyyy" name="preferredTime" required />
               </form>
