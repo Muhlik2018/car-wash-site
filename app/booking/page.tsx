@@ -142,7 +142,7 @@ export default function BookingPage() {
     };
 
     try {
-      const response = await fetch('https://www.scutbl.top:3001/booking', {
+      const response = await fetch('http://www.scutbl.top:3001/booking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
