@@ -85,12 +85,12 @@ function ServiceCard({
 export default function Home() {
   const services = [
     {
-      title: "Exterior Wash",
-      description: "Complete exterior cleaning with premium soap, hand rinse, and protective wax for a showroom shine.",
+      title: "Inside-Out Wash",
+      description: "Exterior and interior cleaning by hand, with quality products and professional tools for a quick and clean result.",
       details:
-        "Our Exterior Wash includes foam pre-wash, high-quality soap application, window cleaning, hand rinse and a finishing wax sealant for lasting protection and shine.",
+        "Our Inside-Out Wash includes exteior foam cleaning, spray waxing and interior wipe and vacuuming, ensuring your car looks and feels fresh inside and out.",
       icon: "🧽",
-      price: "$49",
+      price: "$99",
     },
     {
       title: "Premium Wash",
@@ -98,15 +98,61 @@ export default function Home() {
       details:
         "Premium Wash combines exterior cleaning with tyre shine, wheel cleaning, interior vacuuming, leather conditioning, and odor elimination for a complete vehicle refresh.",
       icon: "🧼",
-      price: "$129",
+      price: "$179",
     },
     {
-      title: "Express Detail",
-      description: "Express professional detailing service for showroom-quality results.",
+      title: "Full Detail",
+      description: "Full professional detailing service for showroom-quality results.",
       details:
-        "Upon premium wash, express detail provide seat deep cleaning, steam cleaning, hand waxing and engine bay cleaning for a showroom-quality result.",
+        "Upon premium wash, full detail provides stage I cut & polish, ceramic coating, and interior deep cleaning for a showroom-quality result.",
       icon: "🚿",
-      price: "$259",
+      price: "$599",
+    },
+  ];
+
+  const addOnServices = [
+    {
+      title: "Headlight Restoration",
+      description: "Removes yellowing and haze from headlight lenses to improve clarity, night visibility, and appearance.",
+      price: "$100",
+    },
+    {
+      title: "Seat Shampoo",
+      description: "Deep shampoo and extraction for fabric seats to lift stains, dirt, and odours.",
+      price: "$100",
+    },
+    {
+      title: "Leather Care",
+      description: "Gentle cleaning and conditioning to keep leather soft, protected, and free from cracking.",
+      price: "$80",
+    },
+    {
+      title: "Steam Clean",
+      description: "High-temperature steam to sanitise and freshen surfaces and tight spots without harsh chemicals.",
+      price: "$50",
+    },
+    {
+      title: "Hand Waxing",
+      description: "Hand-applied wax for a deep, glossy finish and lasting paint protection.",
+      price: "$50",
+    },
+  ];
+
+  const professionalServices = [
+    {
+      title: "Stage I Paint Correction",
+      description: "Single-step machine polish that removes light swirls, fine scratches, and oxidation to restore gloss and clarity.",
+      price: "$499",
+    },
+    {
+      title: "Stage II Paint Correction",
+      description: "Two-step cut and polish that corrects moderate swirls, scratches, and water spots for a deeper, more flawless finish.",
+      price: "$699",
+    },
+    {
+      title: "Ceramic Coating",
+      description: "Long-lasting ceramic protection that adds a hard, hydrophobic layer, boosting shine and shielding paint from UV, dirt, and contaminants.",
+      price: "$399",
     },
   ];
 
@@ -163,6 +209,55 @@ export default function Home() {
             {services.map((service) => (
               <ServiceCard key={service.title} service={service} onOpen={setActiveService} />
             ))}
+          </div>
+          <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 sm:p-10">
+            <div className="space-y-3">
+              <p className="text-sm uppercase tracking-[0.24em] text-emerald-600">Other add-on services</p>
+              <h3 className="text-2xl font-semibold text-gray-900 sm:text-3xl">Extra care when your car needs it.</h3>
+              <p className="max-w-3xl text-base leading-7 text-gray-600">
+                Add any of these services to your booking for targeted cleaning, protection, and restoration.
+              </p>
+            </div>
+            <ul className="mt-8 divide-y divide-gray-200 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+              {addOnServices.map((service) => (
+                <li
+                  key={service.title}
+                  className="flex items-center justify-between gap-4 px-6 py-4 transition hover:bg-emerald-50/50 sm:px-8 sm:py-5"
+                >
+                  <div>
+                    <p className="text-base font-semibold text-gray-900 sm:text-lg">{service.title}</p>
+                    <p className="mt-1 text-sm leading-6 text-gray-600">{service.description}</p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-emerald-50 px-4 py-1.5 text-base font-semibold text-emerald-700 ring-1 ring-emerald-200 sm:text-lg">
+                    {service.price}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="space-y-6">
+            <div className="space-y-3 text-center lg:text-left">
+              <p className="text-sm uppercase tracking-[0.24em] text-emerald-600">Professional line</p>
+              <h3 className="text-2xl font-semibold text-gray-900 sm:text-3xl">Specialist treatments for showroom results.</h3>
+              <p className="max-w-3xl text-base leading-7 text-gray-600">
+                Advanced paint correction and protection services performed by our experienced detailers.
+              </p>
+            </div>
+            <div className="grid gap-6 lg:grid-cols-3">
+              {professionalServices.map((service, index) => (
+                <article
+                  key={service.title}
+                  className="flex flex-col rounded-3xl border border-gray-200 border-t-4 border-t-emerald-500 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10"
+                >
+                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">
+                    {`0${index + 1}`}
+                  </span>
+                  <h4 className="mt-3 text-xl font-semibold text-gray-900">{service.title}</h4>
+                  <p className="mt-3 flex-1 text-sm leading-7 text-gray-600">{service.description}</p>
+                  <p className="mt-6 border-t border-gray-200 pt-4 text-2xl font-semibold text-emerald-600">{service.price}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -265,12 +360,12 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.24em] text-emerald-700">Ready to ride cleaner</p>
             <h2 className="mt-4 text-3xl font-semibold text-gray-900">Reserve your next wash.</h2>
             <p className="mt-4 text-base leading-7 text-gray-600">
-              Choose a package, select a time, and get back on the road with a freshly cleaned car at your doorstep.
+              We offer in store or to door options with extra charges, book today and we will contact you shortly.
             </p>
             <div className="mt-8 space-y-6">
               {[
-                { label: "Location", value: "PO Box 798, 414 Albany Hwy, Victoria Park" },
-                { label: "Hours", value: "All day" },
+                { label: "Location", value: "408 Scarborough Beach Rd Osborne Park WA 6017" },
+                { label: "Hours", value: "All day - Booking Required" },
                 { label: "Contact", value: "starlightautocarwash@gmail.com" },
               ].map((item) => (
                 <div key={item.label} className="rounded-3xl bg-gray-50 p-5 border border-gray-200">

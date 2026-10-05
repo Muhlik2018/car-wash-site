@@ -88,28 +88,28 @@ function SelectInput({
 export default function BookingPage() {
   const services = [
     {
-      title: "Exterior Wash",
-      description: "Complete exterior cleaning with premium soap, wheel detailing, and protective wax for a showroom shine.",
+      title: "Inside-Out Wash",
+      description: "Exterior and interior cleaning by hand, with quality products and professional tools for a quick and clean result.",
       details:
-        "Our Exterior Wash includes foam pre-wash, hand rinse, wheel cleaning, tire shine, high-quality soap application, and a finishing wax sealant for lasting protection and shine.",
+        "Our Inside-Out Wash includes exteior foam cleaning, spray waxing and interior wipe and vacuuming, ensuring your car looks and feels fresh inside and out.",
       icon: "🧽",
-      price: "$49",
+      price: "$99",
     },
     {
       title: "Premium Wash",
       description: "Comprehensive exterior and interior cleaning with advanced detailing techniques for superior results.",
       details:
-        "Premium Wash combines exterior cleaning with interior vacuuming, dashboard polish, window cleaning, leather conditioning, and odor elimination for a complete vehicle refresh.",
+        "Premium Wash combines exterior cleaning with tyre shine, wheel cleaning, interior vacuuming, leather conditioning, and odor elimination for a complete vehicle refresh.",
       icon: "🧼",
-      price: "$129",
+      price: "$179",
     },
     {
-      title: "Express Detail",
-      description: "Full professional detailing service with ceramic coating, paint correction, and complete interior restoration.",
+      title: "Full Detail",
+      description: "Full professional detailing service for showroom-quality results.",
       details:
-        "Express Detail provides full exterior correction, clay bar treatment, ceramic coating application, complete interior deep clean, trim restoration, engine bay detailing, and finishing touches for a showroom-quality result.",
+        "Upon premium wash, full detail provides stage I cut & polish, ceramic coating, and interior deep cleaning for a showroom-quality result.",
       icon: "🚿",
-      price: "$259",
+      price: "$599",
     },
   ];
 
